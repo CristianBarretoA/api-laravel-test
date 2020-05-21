@@ -21,7 +21,7 @@ class CreateProductosTable extends Migration
             $table->string('sku',10)->unique();
             $table->timestamps();
 
-            $table->foreign('categoria_id')->references('id')->on('categorias');
+            $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade');
         });
     }
 
